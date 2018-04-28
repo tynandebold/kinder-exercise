@@ -1,0 +1,12 @@
+.product-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 10;
+
+  .product-header__name {
+    color: #fc471e;
+  }
+}

@@ -1,0 +1,53 @@
+.btns-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+
+  button {
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, .04), 0 2px 1px 0 rgba(0, 0, 0, .04);
+    font-size: 30px;
+    height: 55px;
+    width: 55px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  #pass i:before {
+    background: -webkit-linear-gradient(#fc171c, #fc381d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  #super-like {
+    font-size: 45px;
+    height: 75px;
+    margin: 0 12px;
+    width: 75px;
+
+    i:before {
+      background: -webkit-linear-gradient(#30fefa, #79fed8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: block;
+      margin-top: -1px;
+      margin-left: 1px;
+    }
+  }
+
+  #like i:before {
+    background: -webkit-linear-gradient(#adf744, #9dd141);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

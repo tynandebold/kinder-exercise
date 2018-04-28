@@ -1,0 +1,325 @@
+@charset "UTF-8";
+.display-wrapper {
+  border: 1px solid #cfcfcd;
+  border-radius: 2px; }
+.display-wrapper ul.cards-wrapper {
+    height: 420px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative; }
+.display-wrapper li.card {
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 420px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: opacity 0.25s, -webkit-transform 0.75s cubic-bezier(0.65, -0.55, 0.25, 1.55);
+    transition: opacity 0.25s, -webkit-transform 0.75s cubic-bezier(0.65, -0.55, 0.25, 1.55);
+    transition: transform 0.75s cubic-bezier(0.65, -0.55, 0.25, 1.55), opacity 0.25s;
+    transition: transform 0.75s cubic-bezier(0.65, -0.55, 0.25, 1.55), opacity 0.25s, -webkit-transform 0.75s cubic-bezier(0.65, -0.55, 0.25, 1.55);
+    -webkit-transition-delay: 0.33s;
+            transition-delay: 0.33s;
+    z-index: -1; }
+.display-wrapper li.card.active {
+      opacity: 1;
+      z-index: 100; }
+.display-wrapper li.card:after {
+      border-radius: 6px;
+      content: '';
+      font-size: 64px;
+      padding: 4px;
+      left: 24px;
+      position: absolute;
+      top: 32px;
+      -webkit-transform: rotate(-10deg);
+              transform: rotate(-10deg);
+      visibility: hidden; }
+.display-wrapper li.pass {
+    opacity: 1;
+    -webkit-transform: translate3d(-475px, -150px, 0) rotate3d(0, 0, 1, -60deg);
+            transform: translate3d(-475px, -150px, 0) rotate3d(0, 0, 1, -60deg);
+    z-index: 150; }
+.display-wrapper li.pass:after {
+      border: 2px solid #c8bc41;
+      color: #c8bc41;
+      content: 'OOPS';
+      visibility: visible; }
+.display-wrapper li.super {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -500px, 0);
+            transform: translate3d(0, -500px, 0);
+    z-index: 150; }
+.display-wrapper li.super:after {
+      border: 2px solid #2efefd;
+      color: #2efefd;
+      content: 'SUPER LIKE';
+      max-width: 200px;
+      visibility: visible; }
+.display-wrapper li.liked {
+    opacity: 1;
+    -webkit-transform: translate3d(475px, 150px, 0) rotate3d(0, 0, 1, -60deg);
+            transform: translate3d(475px, 150px, 0) rotate3d(0, 0, 1, -60deg);
+    z-index: 150; }
+.display-wrapper li.liked:after {
+      border: 2px solid #9fdb31;
+      color: #9fdb31;
+      content: 'LIKE';
+      opacity: 1;
+      visibility: visible; }
+.display-wrapper li.active + li.inactive {
+    z-index: 50; }
+.display-wrapper .kitten-photo {
+    background-position: center;
+    background-size: cover;
+    height: 340px;
+    overflow: hidden;
+    width: 100%; }
+.product-header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 10; }
+.product-header .product-header__name {
+    color: #fc471e; }
+.btns-wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+  width: 100%; }
+.btns-wrapper button {
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, .04), 0 2px 1px 0 rgba(0, 0, 0, .04);
+            box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, .04), 0 2px 1px 0 rgba(0, 0, 0, .04);
+    font-size: 30px;
+    height: 55px;
+    width: 55px; }
+.btns-wrapper button:hover {
+      cursor: pointer; }
+.btns-wrapper button:focus {
+      outline: none; }
+.btns-wrapper #pass i:before {
+    background: -webkit-linear-gradient(#fc171c, #fc381d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+.btns-wrapper #super-like {
+    font-size: 45px;
+    height: 75px;
+    margin: 0 12px;
+    width: 75px; }
+.btns-wrapper #super-like i:before {
+      background: -webkit-linear-gradient(#30fefa, #79fed8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: block;
+      margin-top: -1px;
+      margin-left: 1px; }
+.btns-wrapper #like i:before {
+    background: -webkit-linear-gradient(#adf744, #9dd141);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+@font-face {
+  font-family: 'fontello';
+  src: url("./font/fontello.eot?29776536");
+  src: url("./font/fontello.eot?29776536#iefix") format("embedded-opentype"), url("./font/fontello.woff2?29776536") format("woff2"), url("./font/fontello.woff?29776536") format("woff"), url("./font/fontello.ttf?29776536") format("truetype"), url("./font/fontello.svg?29776536#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?29776536#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  /* width: 1em; */
+  /* margin-right: .2em; */
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  -webkit-font-feature-settings: normal;
+          font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  /* margin-left: .2em; */
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+.icon-cancel:before {
+  content: '\E800'; }
+/* '' */
+.icon-heart:before {
+  content: '\E801'; }
+/* '' */
+.icon-star:before {
+  content: '\E802'; }
+/* '' */
+.icon-info-circled:before {
+  content: '\F085'; }
+/* '' */
+.icon-fire:before {
+  content: '\F525'; }
+/* '' */
+.kitten-info {
+  padding: 0 15px; }
+.kitten-info .kitten-info__name {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 24px;
+    font-weight: 700;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 8px 0 0; }
+.kitten-info .kitten-info__more {
+    font-size: 12px;
+    font-weight: normal; }
+.kitten-info .kitten-info__more:hover {
+      cursor: pointer; }
+.kitten-info .kitten-info__bio {
+    margin: 4px 0 16px; }
+.kitten-info .kitten-info__interests {
+    border-top: 1px solid #cfcfcd;
+    margin: 0 -15px;
+    padding: 0 15px; }
+.kitten-info .kitten-info__interests-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 8px 0 4px; }
+.kitten-info .kitten-info__interests-list {
+    list-style: none;
+    margin: 0 0 8px;
+    padding: 0; }
+.profile-photo {
+  background-position: center center;
+  background-size: 160%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 2px #fc471e, 0 0 0 4px #fff, 0 0 0 6px #fc471e, 0px 0px 1px 8px rgba(0, 0, 0, .08), 0 2px 1px 8px rgba(0, 0, 0, .08);
+          box-shadow: 0 0 0 2px #fc471e, 0 0 0 4px #fff, 0 0 0 6px #fc471e, 0px 0px 1px 8px rgba(0, 0, 0, .08), 0 2px 1px 8px rgba(0, 0, 0, .08);
+  height: 45px;
+  width: 45px; }
+.profile-photo--user {
+  background-image: url("./assets/profile-pic.jpg"); }
+.match-overlay {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, .8);
+  bottom: 0;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 150; }
+.match-overlay .match-overlay__message {
+    font-size: 32px;
+    margin-bottom: 32px; }
+.match-overlay .match-overlay__users {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 32px;
+    width: 230px; }
+.match-overlay .match-overlay__user-info {
+    text-align: center; }
+.match-overlay .match-overlay__user-info small {
+      display: block;
+      font-weight: 300;
+      margin-top: 12px; }
+.match-overlay .profile-photo {
+    height: 85px;
+    width: 85px; }
+.match-overlay .match-overlay__continue {
+    background-color: #fc471e;
+    border-radius: 40px;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    font-family: ubuntu;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    padding: 20px; }
+.match-overlay .match-overlay__continue:focus {
+      outline: none; }
+@font-face {
+  font-family: "Chalet";
+  src: url("./font/ChaletNewYorkNineteenSeventy.ttf") format("truetype"); }
+body {
+  background-image: url("./assets/background.jpg");
+  background-repeat: repeat;
+  font-family: Ubuntu; }
+main {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 1px 2px 3px rgba(0, 0, 0, .22), 0 3px 2px 0 rgba(0, 0, 0, .22);
+          box-shadow: 0px 1px 2px 3px rgba(0, 0, 0, .22), 0 3px 2px 0 rgba(0, 0, 0, .22);
+  margin: 0 auto;
+  max-width: 340px;
+  overflow: hidden; }
+section {
+  padding: 5px 20px 20px;
+  position: relative; }
+h1 {
+  font-family: Chalet; }
+
+/*# sourceMappingURL=style.css.map*/

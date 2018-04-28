@@ -1,0 +1,57 @@
+.match-overlay {
+  align-items: center;
+  background-color: rgba(0,0,0, 0.8);
+  bottom: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 150;
+
+  .match-overlay__message {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .match-overlay__users {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    width: 230px;
+  }
+
+  .match-overlay__user-info {
+    text-align: center;
+
+    small {
+      display: block;
+      font-weight: 300;
+      margin-top: 12px;
+    }
+  }
+
+  .profile-photo {
+    height: 85px;
+    width: 85px;
+  }
+
+  .match-overlay__continue {
+    background-color: #fc471e;
+    border-radius: 40px;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    font-family: ubuntu;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    padding: 20px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

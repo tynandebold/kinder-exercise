@@ -1,0 +1,35 @@
+@import "components/cards";
+@import "components/header";
+@import "components/buttons";
+@import "components/fontello";
+@import "components/user-info";
+@import "components/profile-photo";
+@import "components/match-overlay";
+
+@font-face {
+  font-family: "Chalet";
+  src: url('/font/ChaletNewYorkNineteenSeventy.ttf') format("truetype");
+}
+
+body {
+  background-image: url('/assets/background.jpg');
+  background-repeat: repeat;
+  font-family: Ubuntu;
+}
+
+main {
+  background-color: #fff;
+  box-shadow: 0px 1px 2px 3px rgba(0, 0, 0, .22), 0 3px 2px 0 rgba(0, 0, 0, .22);
+  margin: 0 auto;
+  max-width: 340px;
+  overflow: hidden;
+}
+
+section {
+  padding: 5px 20px 20px;
+  position: relative;
+}
+
+h1 {
+  font-family: Chalet;
+}
